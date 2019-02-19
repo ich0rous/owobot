@@ -26,9 +26,7 @@ bot.on('message', msg => {
       msg.channel.send({
         files: ['https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif']
       })
-    }
-
-    }
+    }  
   }
 })
 
