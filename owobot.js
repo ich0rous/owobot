@@ -12,10 +12,10 @@ bot.on('message', msg => {
 
 	if(msg.author.bot) return; // Check if user is bot.
 
-  if(msg.content.startsWith("owo!")){
-    let cmd = msg.content.split("owo!")
-    if(cmd[1] == "?"){
-      msg.channel.sendMessage("OwO, what's this?");
+  if(msg.content.startsWith("owo!")){ // Check for prefix.
+    let cmd = msg.content.split("owo!") // Split at the prefix.
+    if(cmd[1] == "?"){ // cmd[1] returns with the actual command.
+      msg.channel.sendMessage("OwO, what's this?"); // Respond accordingly.
     }
   }
 
