@@ -24,22 +24,6 @@ bot.on('message', msg => {
         .catch(console.error);
     }
   }
-
-  /*
-
-	if(msg.content == "OWO"){
-		msg.channel.sendMessage("ÒwÓ, DAFUQ IS DIS???? https://puu.sh/COkZQ/6dd8c62320.gif");
-	}
-
-	if(msg.content == "owo?"){
-		msg.channel.sendMessage("OwO, what's this?");
-	}
-
-	if(msg.content == "owo"){
-		msg.channel.sendMessage("OWO");
-	}
-
-  */
 })
 
 bot.login(config.token);
