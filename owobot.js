@@ -1,6 +1,7 @@
 //owo whats this???
 const fs = require('fs');
 const config = require('./config.json');
+const utils = require('./lib/utils.js')
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
@@ -17,16 +18,12 @@ bot.on('message', msg => {
     if(cmd[1] == "?"){ // cmd[1] returns with the actual command.
       msg.channel.sendMessage("OwO, what's this?"); // Respond accordingly.
     } else if(cmd[1] == "img") { // Suck my cock.
-      msg.channel.send({
-        files: ['https://puu.sh/COkZQ/6dd8c62320.gif'] // Send the remote image.
-      })
-        .then(console.log) // Stop complaining node.
-        .catch(console.error);
-    } else if(cmd[1] == "bongo") {
-      msg.channel.send({
-        files: ['https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif']
-      })
-    }  
+      utils.sendImage(msg, "https://puu.sh/COkZQ/6dd8c62320.gif")
+    } else if(cmd[1] == "bongo") { // Literally a picture of Bongo cat.
+      utils.sendImage(msg, "https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif")
+    } else if(cmd[1] == "bird") {
+      utils.sendImage(msg, "https://puu.sh/wcMZy/294569d999.jpg")
+    }
   }
 })
 
