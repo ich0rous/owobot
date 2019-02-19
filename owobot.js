@@ -23,6 +23,12 @@ bot.on('message', msg => {
       })
         .then(console.log) // Stop complaining node.
         .catch(console.error);
+    } else if(cmd[1] == "bongo") {
+      msg.channel.send({
+        files: ['https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif']
+      })
+    }
+
     }
   }
 
