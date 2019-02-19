@@ -16,8 +16,17 @@ bot.on('message', msg => {
     let cmd = msg.content.split("owo!") // Split at the prefix.
     if(cmd[1] == "?"){ // cmd[1] returns with the actual command.
       msg.channel.sendMessage("OwO, what's this?"); // Respond accordingly.
+    } else if(cmd[1] == "" && cmd[0].toUpperCase() == "OWO!") { // Bodgey.
+      msg.channel.send({
+        files: [{
+          attachment: './triggerowo_by_alziratt-dcclp1e.gif',
+          name: 'owo.gif'
+        }]
+      })
     }
   }
+
+  /*
 
 	if(msg.content == "OWO"){
 		msg.channel.sendMessage("ÒwÓ, DAFUQ IS DIS???? https://puu.sh/COkZQ/6dd8c62320.gif");
@@ -30,10 +39,9 @@ bot.on('message', msg => {
 	if(msg.content == "owo"){
 		msg.channel.sendMessage("OWO");
 	}
+
+  */
 })
 
-
-
-
-
 bot.login(config.token);
+// Furious hacker noises.
