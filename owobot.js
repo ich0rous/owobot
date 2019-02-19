@@ -9,7 +9,15 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
+
 	if(msg.author.bot) return; // Check if user is bot.
+
+  if(msg.content.startsWith("owo!")){
+    let cmd = msg.content.split("owo!")
+    if(cmd[1] == "?"){
+      msg.channel.sendMessage("OwO, what's this?");
+    }
+  }
 
 	if(msg.content == "OWO"){
 		msg.channel.sendMessage("ÒwÓ, DAFUQ IS DIS???? https://puu.sh/COkZQ/6dd8c62320.gif");
@@ -21,8 +29,7 @@ bot.on('message', msg => {
 
 	if(msg.content == "owo"){
 		msg.channel.sendMessage("OWO");
-	} 
-
+	}
 })
 
 
