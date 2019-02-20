@@ -17,13 +17,13 @@ bot.on('message', msg => {
     let cmd = msg.content.split("owo!") // Split at the prefix.
     if(cmd[1] == "?"){ // cmd[1] returns with the actual command.
       msg.channel.sendMessage("OwO, what's this?"); // Respond accordingly.
-    } else if(cmd[1] == "img") { // Suck my cock.
+    } else if(cmd[1] == "!") { // Suck my cock.
       utils.sendImage(msg, "https://puu.sh/COkZQ/6dd8c62320.gif")
     } else if(cmd[1] == "bongo") { // Literally a picture of Bongo cat.
       utils.sendImage(msg, "https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif")
     } else if(cmd[1] == "bird") {
       utils.sendImage(msg, "https://puu.sh/wcMZy/294569d999.jpg")
-    }
+//    } else if(msg.content.contains == "owo")
   }
 })
 
