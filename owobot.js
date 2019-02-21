@@ -13,7 +13,7 @@ bot.on('message', msg => {
 
 	if(msg.author.bot) return; // Check if user is bot.
 
-  if(msg.content.startsWith("owo!")){ // Check for prefix.
+  if(msg.content.startsWith("owo!") || msg.content.startsWith("OWO!")){ // Check for prefix.
     let cmd = msg.content.split("owo!") // Split at the prefix.
     if(cmd[1] == "?"){ // cmd[1] returns with the actual command.
       msg.channel.sendMessage("OwO, what's this?"); // Respond accordingly.
@@ -23,9 +23,17 @@ bot.on('message', msg => {
       utils.sendImage(msg, "https://thumbs.gfycat.com/AffectionateDimIberianlynx-small.gif")
     } else if(cmd[1] == "bird") {
       utils.sendImage(msg, "https://puu.sh/wcMZy/294569d999.jpg")
-//    } else if(msg.content.contains == "owo")
+    } else if(msg.content.split("!")[0].toUpperCase() == "OWO"){
+      console.log("Do something?")
+    }
   }
 })
 
 bot.login(config.token);
 // Furious hacker noises.
+
+/*
+else if (msg.content.contains == "OWO") {
+
+}
+*/
